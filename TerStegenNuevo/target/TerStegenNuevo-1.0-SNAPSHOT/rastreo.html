@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Rastreo de Producto</title>
+    <style>
+        .title {
+            text-align: left;
+            color: green;
+            font-size: smaller;
+            position: absolute;
+            top: 0px;
+            left: 20px;
+        }
+        .line-top {
+            width: 100%;
+            border-bottom: 2px solid green;
+            margin-bottom: 20px;
+            position: absolute;
+            top: 50px;
+            left: 0;
+        }
+        .line-bottom {
+            width: 100%;
+            border-top: 2px solid green;
+            margin-top: 30px;
+            position: absolute;
+            bottom: 35px;
+            left: 0;
+        }
+        .logo {
+            max-width: 60px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 10px;
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .button-container {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 10px;
+        }
+        .button {
+            background-color: transparent;
+            border: none;
+            color: green;
+            font-size: smaller;
+            cursor: pointer;
+            margin-left: 10px;
+            text-decoration: none;
+        }
+        .login-button {
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            font-size: smaller;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .resultado {
+            position: absolute;
+            top: 50%;
+            right: 200px;
+            transform: translateY(-50%);
+            color: green;
+            font-size: larger;
+            text-align: left; /* Alineación a la derecha */
+            white-space: pre-line; /* Permitir saltos de línea */
+        }
+    </style>
+</head>
+<body>
+    <h1 class="title">TerStegenDomi</h1>
+    <div class="line-top"></div>
+    <div class="button-container">
+        <a class="button" href="sucursales.html">Sucursales</a>
+        <a class="button" href="contactos.html">Contactos</a>
+        <a class="login-button" href="login.html">Login/SignUp</a>
+    </div>
+    <img class="logo" src="TerStegenLogo.jpg" alt="Mi imagen">
+    
+    <div class="resultado">
+        <script>
+            try {
+            var parametros = window.location.search.substring(1).split("&");
+            var codigo = parametros[0].split("=")[1];
+            var resultado = "";
+
+            switch (codigo.charAt(codigo.length - 1)) {
+                case "1":
+                    resultado = "Su producto esta en camino,\n esta siendo llevado por Martin Salinas\n y se encuentra en esta ubicacion.\n\n\n";
+                    break;
+                case "2":
+                    resultado = "Su producto esta en camino,\n esta siendo llevado por Yamir Martinez\n y se encuentra en esta ubicacion.\n\n\n";
+                    break;
+                case "3":
+                    resultado = "Su producto esta en camino,\n esta siendo llevado por Martin Salinas\n y se encuentra en esta ubicacion.\n\n\n";
+                    break;
+                case "4":
+                    resultado = "Su producto esta en camino,\n esta siendo llevado por Juan Solano\n y se encuentra en esta ubicacion.\n\n\n";
+                    break;
+                case "5":
+                    resultado = "Su producto esta en camino,\n esta siendo llevado por Gerardo Olivas\n y se encuentra en esta ubicacion.\n\n\n";
+                    break;
+                case "6":
+                    resultado = "Su producto esta en camino,\n esta siendo llevado por Yamir Martinez\n y se encuentra en esta ubicacion.\n\n\n";
+                    break;
+                case "7":
+                    resultado = "Su producto esta en camino,\n esta siendo llevado por Martin Salinas\n y se encuentra en esta ubicacion.\n\n\n";
+                    break;
+                case "8":
+                    resultado = "Su producto esta en camino,\n esta siendo llevado por Juan Solano\n y se encuentra en esta ubicacion.\n\n\n";
+                    break;
+                case "9":
+                    resultado = "Su producto esta en camino,\n esta siendo llevado por Gerardo Olivas\n y se encuentra en esta ubicacion.\n\n\n";
+                    break;
+                case "0":
+                    resultado = "Su producto esta en camino,\n esta siendo llevado por Jesus Levario\n y se encuentra en esta ubicacion.\n\n\n";
+                    break;
+                case "q":
+                case "w":
+                case "e":
+                case "r":
+                    resultado = "Su producto esta en camino,\n esta siendo llevado por Martin Salinas\n y se encuentra en esta ubicacion.\n\n\n";
+                    break;
+                case "a":
+                case "s":
+                case "d":
+                case "f":
+                    resultado = "Su producto esta en camino,\n esta siendo llevado por Yamir Martinez\n y se encuentra en esta ubicacion.\n\n\n";
+                    break;
+                case "z":
+                case "x":
+                case "c":
+                case "v":
+                    resultado = "Su producto esta en camino,\n esta siendo llevado por Juan Solano\n y se encuentra en esta ubicacion.\n\n\n";
+                    break;
+                case "t":
+                case "y":
+                case "u":
+                case "i":
+                    resultado = "Su producto esta en camino,\n esta siendo llevado por Gerardo Olivas\n y se encuentra en esta ubicacion.\n\n\n";
+                    break;
+                case "g":
+                case "h":
+                case "j":
+                case "k":
+                    resultado = "Su producto esta en camino,\n esta siendo llevado por Jesus Levario\n y se encuentra en esta ubicacion.\n\n\n";
+                    break;
+                case "b":
+                case "n":
+                case "m":
+                case "l":
+                    resultado = "Su producto esta en camino,\n esta siendo llevado por Juan Solano\n y se encuentra en esta ubicacion.\n\n\n";
+                    break;
+                case "i":
+                case "o":
+                case "p":
+                    resultado = "Su producto esta en camino,\n esta siendo llevado por Yamir Martinez\n y se encuentra en esta ubicacion.\n\n\n";
+                    break;
+                default:
+                    resultado = "No se encontro informacion para el codigo ingresado.";
+            }
+        }catch (exception e) {
+    resultado="Codigo de busqueda erroneo"
+}
+
+            document.write(resultado);
+        </script>
+    </div>
+    <div class="line-bottom"></div>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ter stegen domi</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style>
+        .title {
+            text-align: left;
+            color: green;
+            font-size: smaller;
+            position: absolute;
+            top: 0px;
+            left: 20px;
+        }
+        .line-top {
+            width: 100%;
+            border-bottom: 2px solid green;
+            margin-bottom: 20px;
+            position: absolute;
+            top: 50px;
+            left: 0;
+        }
+        .line-bottom {
+            width: 100%;
+            border-top: 2px solid green;
+            margin-top: 30px;
+            position: absolute;
+            bottom: 35px;
+            left: 0;
+        }
+        .logo {
+            max-width: 60px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 10px;
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .button-container {
+            position: absolute;
+            top: 0;
+            right: 0;
+            padding: 10px;
+        }
+        .button {
+            background-color: transparent;
+            border: none;
+            color: green;
+            font-size: smaller;
+            cursor: pointer;
+            margin-left: 10px;
+            text-decoration: none;
+        }
+        .login-button {
+            background-color: green;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            font-size: smaller;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .rectangle {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: transparent;
+            border: 2px solid green;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            font-size: larger;
+            width: 300px;
+        }
+        .square {
+            position: absolute;
+            top: 50%;
+            left: calc(50% + 180px);
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            background-color: transparent;
+            border: 2px solid green;
+            text-align: center;
+            line-height: 50px;
+        }
+        .search-button {
+            width: 80%;
+            height: 80%;
+            background-color: transparent;
+            border: none;
+            font-size: larger;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<h1 class="title">TerStegenDomi</h1>
+<div class="line-top"></div>
+<div class="button-container">
+    <a class="button" href="sucursales.html">Sucursales</a>
+    <a class="button" href="contactos.html">Contactos</a>
+    <a class="login-button" href="login.html">Login/SignUp</a>
+</div>
+<img class="logo" src="TerStegenLogo.jpg" alt="Mi imagen">
+<div class="rectangle">
+    <input id="codigo" type="text" placeholder="Ingresa el código" style="width: 100%; height: 40px; font-size: larger; text-align: center; border: none; outline: none;">
+</div>
+<div class="square">
+    <button class="search-button" onclick="buscar()">🔍</button>
+</div>
+<div class="line-bottom"></div>
+
+<script>
+    function buscar() {
+        var codigo = document.getElementById("codigo").value;
+        window.location.href = "rastreo.html?codigo=" + codigo;
+    }
+</script>
+</body>
+</html>
